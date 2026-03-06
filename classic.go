@@ -25,7 +25,7 @@ func Classic[C any](files Files, userPlugins ...plugins.Plugin) Config[C] {
 	ps = append(ps, userPlugins...)
 
 	// followed by envs
-	ps = append(ps, env.New())
+	ps = append(ps, env.New(""))
 
 	// and lastly flags.
 	ps = append(ps, flag.Standard())

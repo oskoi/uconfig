@@ -16,17 +16,23 @@ func init() {
 }
 
 // New returns an EnvSet.
-func New() plugins.Plugin {
-	return &visitor{}
+func New(prefix string) plugins.Plugin {
+	return &visitor{
+		prefix: prefix,
+	}
 }
 
 type visitor struct {
+	prefix string
 	fields flat.Fields
 }
 
-func makeEnvName(name string) string {
+func makeEnvName(prefix, name string) string {
 	name = strings.ReplaceAll(name, ".", "_")
 	name = strings.ToUpper(name)
+	if prefix != "" {
+		name = prefix + "_" + name
+	}
 	return name
 }
 
@@ -36,7 +42,7 @@ func (v *visitor) Visit(f flat.Fields) error {
 	for _, f := range v.fields {
 		name, explicit := f.Name(tag)
 		if !explicit {
-			name = makeEnvName(name)
+			name = makeEnvName(v.prefix, name)
 		}
 
 		f.Meta()[tag] = name

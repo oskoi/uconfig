@@ -51,7 +51,7 @@ func TestEnvBasic(t *testing.T) {
 		}
 	}
 
-	conf := uconfig.New[f.Config](env.New())
+	conf := uconfig.New[f.Config](env.New(""))
 
 	value, err := conf.Parse()
 	if err != nil {
@@ -83,7 +83,7 @@ func TestEnvTag(t *testing.T) {
 		Address: "https://blah.bleh",
 	}
 
-	conf := uconfig.New[fEnv](env.New())
+	conf := uconfig.New[fEnv](env.New(""))
 
 	value, err := conf.Parse()
 	if err != nil {

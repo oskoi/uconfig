@@ -24,7 +24,7 @@ func Load[C any](files Files, userPlugins ...plugins.Plugin) Config[C] {
 	ps = append(ps, userPlugins...)
 
 	// followed by envs
-	ps = append(ps, env.New())
+	ps = append(ps, env.New(""))
 
 	return New[C](ps...)
 }
