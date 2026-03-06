@@ -66,7 +66,11 @@ func walkStruct(prefix string, rs reflect.Value) ([]Field, error) {
 			if !ft.Anonymous {
 				// Unless it is anonymous struct, append the field name to the prefix.
 				if structPrefix == "" {
-					structPrefix = ft.Name
+					if name, ok := ft.Tag.Lookup("uconfig"); ok && name != "" {
+						structPrefix = name
+					} else {
+						structPrefix = ft.Name
+					}
 				} else {
 					structPrefix = structPrefix + "." + ft.Name
 				}
