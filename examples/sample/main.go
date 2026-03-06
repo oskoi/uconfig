@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/omeid/uconfig"
+	"github.com/oskoi/uconfig"
 
-	"github.com/omeid/uconfig/examples/sample/database"
-	"github.com/omeid/uconfig/examples/sample/redis"
+	"github.com/oskoi/uconfig/examples/sample/database"
+	"github.com/oskoi/uconfig/examples/sample/redis"
 )
 
 // Config is our application config.

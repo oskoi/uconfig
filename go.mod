@@ -1,4 +1,4 @@
-module github.com/omeid/uconfig
+module github.com/oskoi/uconfig
 
 retract v1.2.0
 

@@ -3,7 +3,7 @@ package plugins_test
 import (
 	"testing"
 
-	"github.com/omeid/uconfig/plugins"
+	"github.com/oskoi/uconfig/plugins"
 )
 
 func TestRegisterTagMustPanic(t *testing.T) {

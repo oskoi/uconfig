@@ -8,9 +8,9 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/omeid/uconfig"
-	"github.com/omeid/uconfig/internal/f"
-	"github.com/omeid/uconfig/plugins/secret"
+	"github.com/oskoi/uconfig"
+	"github.com/oskoi/uconfig/internal/f"
+	"github.com/oskoi/uconfig/plugins/secret"
 )
 
 func TestMain(m *testing.M) {

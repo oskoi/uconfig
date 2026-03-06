@@ -1,4 +1,4 @@
-# uConfig [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](https://godoc.org/github.com/omeid/uconfig) [![Build Status](https://app.travis-ci.com/omeid/uconfig.svg?branch=master)](https://app.travis-ci.com/omeid/uconfig) [![Go Report Card](https://goreportcard.com/badge/github.com/omeid/uconfig)](https://goreportcard.com/report/github.com/omeid/uconfig) [![Coverage](https://gocover.io/_badge/github.com/omeid/uconfig?update)](https://gocover.io/github.com/omeid/uconfig)
+# uConfig [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](https://godoc.org/github.com/oskoi/uconfig) [![Build Status](https://app.travis-ci.com/oskoi/uconfig.svg?branch=master)](https://app.travis-ci.com/oskoi/uconfig) [![Go Report Card](https://goreportcard.com/badge/github.com/oskoi/uconfig)](https://goreportcard.com/report/github.com/oskoi/uconfig) [![Coverage](https://gocover.io/_badge/github.com/oskoi/uconfig?update)](https://gocover.io/github.com/oskoi/uconfig)
 
 
 Lightweight, zero-dependency, and extendable configuration management.
@@ -40,10 +40,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/omeid/uconfig"
+	"github.com/oskoi/uconfig"
 
-	"github.com/omeid/uconfig/examples/sample/database"
-	"github.com/omeid/uconfig/examples/sample/redis"
+	"github.com/oskoi/uconfig/examples/sample/database"
+	"github.com/oskoi/uconfig/examples/sample/redis"
 )
 
 
@@ -138,7 +138,7 @@ $ go run main.go
 ```
 
 uConfig supports all basic types, time.Duration, slices, and any other type through `encoding.TextUnmarshaler` interface.
-See the _[flat view](https://godoc.org/github.com/omeid/uconfig/flat)_ package for details.
+See the _[flat view](https://godoc.org/github.com/oskoi/uconfig/flat)_ package for details.
 
 ## Custom names:
 
@@ -220,7 +220,7 @@ type Config struct {
 ```
 
 ## Secrets Plugin
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](https://godoc.org/github.com/omeid/uconfig/plugins/secret)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](https://godoc.org/github.com/oskoi/uconfig/plugins/secret)
 
 The secret provider allows you to grab the value of a config from anywhere you want. You simply need to implement the `func(name string) (value string)` function and pass it to the secrets plugin.
 
@@ -233,10 +233,10 @@ import (
     "encoding/json"
     "fmt"
 
-    "github.com/omeid/uconfig"
-    "github.com/omeid/uconfig/plugins/secret"
+    "github.com/oskoi/uconfig"
+    "github.com/oskoi/uconfig/plugins/secret"
 
-    "github.com/omeid/uconfig/examples/secrets/secretsource"
+    "github.com/oskoi/uconfig/examples/secrets/secretsource"
 )
 
 // Creds is an example of a config struct that uses secret values.
@@ -286,8 +286,8 @@ package something
 import (
   "testing"
 
-  "github.com/omeid/uconfig"
-  "github.com/omeid/uconfig/defaults"
+  "github.com/oskoi/uconfig"
+  "github.com/oskoi/uconfig/defaults"
 )
 
 func TestSomething(t *testing.T) error {
@@ -301,7 +301,7 @@ func TestSomething(t *testing.T) error {
 ```
 
 See the Classic source for how to compose plugins.
-For more details, see the [godoc](https://godoc.org/github.com/omeid/uconfig).
+For more details, see the [godoc](https://godoc.org/github.com/oskoi/uconfig).
 
 ## Extending uConfig:
 
@@ -313,7 +313,7 @@ To implement your own, see the examples.
 
 ### Visitors
 
-Visitors get a _[flat view](https://godoc.org/github.com/omeid/uconfig/flat)_ of the configuration struct, which is a flat view of the structs regardless of nesting level, for more details see the [flat](https://godoc.org/github.com/omeid/uconfig/flat) package documentation.
+Visitors get a _[flat view](https://godoc.org/github.com/oskoi/uconfig/flat)_ of the configuration struct, which is a flat view of the structs regardless of nesting level, for more details see the [flat](https://godoc.org/github.com/oskoi/uconfig/flat) package documentation.
 
 Plugins that load the configurations from flat structures (e.g flags, environment variables, default tags) are good candidates for this type of plugin.
 See [env plugin](plugins/env/env.go) for an example.

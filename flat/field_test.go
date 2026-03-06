@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/omeid/uconfig/flat"
+	"github.com/oskoi/uconfig/flat"
 )
 
 func TestField(t *testing.T) {

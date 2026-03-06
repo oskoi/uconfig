@@ -5,8 +5,8 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/omeid/uconfig/flat"
-	"github.com/omeid/uconfig/plugins"
+	"github.com/oskoi/uconfig/flat"
+	"github.com/oskoi/uconfig/plugins"
 )
 
 const tag = "secret"

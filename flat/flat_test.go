@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/omeid/uconfig/flat"
-	"github.com/omeid/uconfig/internal/f"
+	"github.com/oskoi/uconfig/flat"
+	"github.com/oskoi/uconfig/internal/f"
 )
 
 func TestFlattenNested(t *testing.T) {

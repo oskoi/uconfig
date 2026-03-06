@@ -4,10 +4,10 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/omeid/uconfig"
-	"github.com/omeid/uconfig/flat"
-	"github.com/omeid/uconfig/internal/f"
-	"github.com/omeid/uconfig/plugins"
+	"github.com/oskoi/uconfig"
+	"github.com/oskoi/uconfig/flat"
+	"github.com/oskoi/uconfig/internal/f"
+	"github.com/oskoi/uconfig/plugins"
 )
 
 type BadPlugin interface {

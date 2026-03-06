@@ -1,10 +1,10 @@
 package uconfig
 
 import (
-	"github.com/omeid/uconfig/plugins"
-	"github.com/omeid/uconfig/plugins/defaults"
-	"github.com/omeid/uconfig/plugins/env"
-	"github.com/omeid/uconfig/plugins/file"
+	"github.com/oskoi/uconfig/plugins"
+	"github.com/oskoi/uconfig/plugins/defaults"
+	"github.com/oskoi/uconfig/plugins/env"
+	"github.com/oskoi/uconfig/plugins/file"
 )
 
 // UnmarshalOptions represents a set of file paths and the appropriate unmarshaller function.

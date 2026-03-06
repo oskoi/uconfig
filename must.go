@@ -1,6 +1,6 @@
 package uconfig
 
-import "github.com/omeid/uconfig/plugins"
+import "github.com/oskoi/uconfig/plugins"
 
 // Must is like New but also calls Parse and panics instead
 // of returning errors. This is useful in tests.

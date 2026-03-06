@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/omeid/uconfig"
-	"github.com/omeid/uconfig/plugins/defaults"
+	"github.com/oskoi/uconfig"
+	"github.com/oskoi/uconfig/plugins/defaults"
 )
 
 type fDefaults struct {

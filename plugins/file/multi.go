@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/omeid/uconfig/plugins"
+	"github.com/oskoi/uconfig/plugins"
 )
 
 type UnmarshalOptions map[string]Unmarshal

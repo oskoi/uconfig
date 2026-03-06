@@ -4,10 +4,10 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/omeid/uconfig"
-	"github.com/omeid/uconfig/internal/f"
-	"github.com/omeid/uconfig/plugins/defaults"
-	"github.com/omeid/uconfig/plugins/flag"
+	"github.com/oskoi/uconfig"
+	"github.com/oskoi/uconfig/internal/f"
+	"github.com/oskoi/uconfig/plugins/defaults"
+	"github.com/oskoi/uconfig/plugins/flag"
 )
 
 func TestFlagBasic(t *testing.T) {

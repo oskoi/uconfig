@@ -10,8 +10,8 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/omeid/uconfig/flat"
-	"github.com/omeid/uconfig/plugins"
+	"github.com/oskoi/uconfig/flat"
+	"github.com/oskoi/uconfig/plugins"
 	"golang.org/x/exp/maps"
 )
 

@@ -6,7 +6,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/omeid/uconfig/plugins"
+	"github.com/oskoi/uconfig/plugins"
 )
 
 // Files represents a set of file paths and the appropriate

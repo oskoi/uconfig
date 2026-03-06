@@ -30,7 +30,7 @@ import (
   "os"
 
   "gopkg.in/yaml.v2"
-  "github.com/omeid/uconfig"
+  "github.com/oskoi/uconfig"
 )
 
 type Anon struct {

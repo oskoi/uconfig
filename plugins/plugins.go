@@ -7,7 +7,7 @@ import (
 	"log"
 	"runtime"
 
-	"github.com/omeid/uconfig/flat"
+	"github.com/oskoi/uconfig/flat"
 )
 
 // Plugin is the common interface for all uConfig providers.

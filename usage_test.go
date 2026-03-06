@@ -6,11 +6,11 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/omeid/uconfig"
-	"github.com/omeid/uconfig/flat"
-	"github.com/omeid/uconfig/internal/f"
-	"github.com/omeid/uconfig/plugins"
-	"github.com/omeid/uconfig/plugins/secret"
+	"github.com/oskoi/uconfig"
+	"github.com/oskoi/uconfig/flat"
+	"github.com/oskoi/uconfig/internal/f"
+	"github.com/oskoi/uconfig/plugins"
+	"github.com/oskoi/uconfig/plugins/secret"
 )
 
 const expectedUsageMessage = `Usage:
@@ -19,15 +19,15 @@ const expectedUsageMessage = `Usage:
 Configurations:
 FIELD                   FLAG                     ENV                     DEFAULT    GOODPLUGIN              SECRET              USAGE
 -----                   -----                    -----                   -------    ----------              ------              -----
-Version                 -version                 VERSION                            Version                                     
-GoHard                  -gohard                  GOHARD                             GoHard                                      
-Redis.Address           -redis-address           REDIS_ADDRESS                      Redis.Address                               
-Redis.Port              -redis-port              REDIS_PORT                         Redis.Port                                  
-Rethink.Host.Address    -rethink-host-address    RETHINK_HOST_ADDRESS               Rethink.Host.Address                        
-Rethink.Host.Port       -rethink-host-port       RETHINK_HOST_PORT                  Rethink.Host.Port                           
+Version                 -version                 VERSION                            Version
+GoHard                  -gohard                  GOHARD                             GoHard
+Redis.Address           -redis-address           REDIS_ADDRESS                      Redis.Address
+Redis.Port              -redis-port              REDIS_PORT                         Redis.Port
+Rethink.Host.Address    -rethink-host-address    RETHINK_HOST_ADDRESS               Rethink.Host.Address
+Rethink.Host.Port       -rethink-host-port       RETHINK_HOST_PORT                  Rethink.Host.Port
 Rethink.Db              -rethink-db              RETHINK_DB              primary    Rethink.Db                                  main database used by our application
-Rethink.Password        -rethink-password        RETHINK_PASSWORD                   Rethink.Password        RETHINK_PASSWORD    
-Command                 [command]                COMMAND                 run        Command                                     
+Rethink.Password        -rethink-password        RETHINK_PASSWORD                   Rethink.Password        RETHINK_PASSWORD
+Command                 [command]                COMMAND                 run        Command
 
 Configuration Files:
     /etc/app/config.yaml

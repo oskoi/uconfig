@@ -9,10 +9,10 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/omeid/uconfig/flat"
-	"github.com/omeid/uconfig/plugins"
-	"github.com/omeid/uconfig/plugins/file"
-	"github.com/omeid/uconfig/plugins/flag"
+	"github.com/oskoi/uconfig/flat"
+	"github.com/oskoi/uconfig/plugins"
+	"github.com/oskoi/uconfig/plugins/file"
+	"github.com/oskoi/uconfig/plugins/flag"
 )
 
 const usageTag = "usage"

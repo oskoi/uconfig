@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/omeid/uconfig"
-	"github.com/omeid/uconfig/examples/secrets/secretsource"
-	"github.com/omeid/uconfig/plugins/secret"
+	"github.com/oskoi/uconfig"
+	"github.com/oskoi/uconfig/examples/secrets/secretsource"
+	"github.com/oskoi/uconfig/plugins/secret"
 )
 
 // Creds is an example of a config struct that uses secret values.

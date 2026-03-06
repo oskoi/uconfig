@@ -6,9 +6,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/omeid/uconfig"
-	"github.com/omeid/uconfig/internal/f"
-	"github.com/omeid/uconfig/plugins/file"
+	"github.com/oskoi/uconfig"
+	"github.com/oskoi/uconfig/internal/f"
+	"github.com/oskoi/uconfig/plugins/file"
 )
 
 func TestMust(t *testing.T) {
