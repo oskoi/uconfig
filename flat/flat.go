@@ -49,8 +49,6 @@ func View(s any) (Fields, error) {
 }
 
 func walkStruct(prefix string, rs reflect.Value) ([]Field, error) {
-	prefix = caser.String(prefix)
-
 	fields := []Field{}
 
 	ts := rs.Type()
@@ -67,9 +65,12 @@ func walkStruct(prefix string, rs reflect.Value) ([]Field, error) {
 				// Unless it is anonymous struct, append the field name to the prefix.
 				if structPrefix == "" {
 					if name, ok := ft.Tag.Lookup("uconfig"); ok && name != "" {
+						if name == "-" {
+							continue
+						}
 						structPrefix = name
 					} else {
-						structPrefix = ft.Name
+						structPrefix = caser.String(ft.Name)
 					}
 				} else {
 					structPrefix = structPrefix + "." + ft.Name
@@ -86,6 +87,9 @@ func walkStruct(prefix string, rs reflect.Value) ([]Field, error) {
 
 			// unless it is override
 			if name, ok := ft.Tag.Lookup("uconfig"); ok && name != "" {
+				if name == "-" {
+					continue
+				}
 				fieldName = name
 			}
 
