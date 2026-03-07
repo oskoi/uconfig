@@ -3,6 +3,7 @@ package uconfig_test
 import (
 	"bytes"
 	"encoding/json"
+	"os"
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
@@ -54,6 +55,11 @@ var files = uconfig.Files{
 }
 
 func TestUsage(t *testing.T) {
+	// Save original os.Args and restore after test
+	oldArgs := os.Args
+	defer func() { os.Args = oldArgs }()
+	os.Args = os.Args[:1]
+
 	var stdout bytes.Buffer
 	uconfig.UsageOutput = &stdout
 
@@ -88,6 +94,6 @@ func TestUsage(t *testing.T) {
 	output := stdout.String()
 
 	if diff := cmp.Diff(expectedUsageMessage, output); diff != "" {
-		// t.Error(diff)
+		t.Error(diff)
 	}
 }

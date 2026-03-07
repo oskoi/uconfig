@@ -30,7 +30,8 @@ func (c *config[C]) Usage() {
 	setUsageMeta(c.fields)
 	headers := getHeaders(c.fields)
 
-	w := tabwriter.NewWriter(UsageOutput, 0, 0, 4, ' ', 0)
+	var buf strings.Builder
+	w := tabwriter.NewWriter(&buf, 0, 0, 4, ' ', 0)
 	_, _ = fmt.Fprintf(w, "Usage:\n\t%s [flags] [command]\n", path.Base(os.Args[0]))
 	_, _ = fmt.Fprintf(w, "\nConfigurations:\n")
 	_, _ = fmt.Fprintln(w, strings.ToUpper(strings.Join(headers, "\t")))
@@ -82,6 +83,13 @@ func (c *config[C]) Usage() {
 		// and so panicing is acceptable.
 		panic(err)
 	}
+
+	// Trim trailing whitespace from each line
+	lines := strings.Split(buf.String(), "\n")
+	for i, line := range lines {
+		lines[i] = strings.TrimRight(line, " \t")
+	}
+	_, _ = fmt.Fprint(UsageOutput, strings.Join(lines, "\n"))
 }
 
 func setUsageMeta(fs flat.Fields) {
